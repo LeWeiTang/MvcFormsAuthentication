@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Admin/Index</h2>
+
+這是管理後台，需要驗證授權才能存取
+<br />
+User Name : @User.Identity.Name
+
+<br />
+
+Is Authentication : @User.Identity.IsAuthenticated
+
+<br />
+
+Authentication : @User.Identity.AuthenticationType
+
+<br />
+
+@Html.ActionLink("登出","SignOut","Account",null,new { @class="btn btn-danger"})
